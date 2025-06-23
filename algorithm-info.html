@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Scheduling Algorithms - Detailed Explanation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="algorithm-info.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-hdd"></i> Disk Scheduling Algorithms</h1>
+            <p>Comprehensive guide to understanding how different disk scheduling algorithms work</p>
+        </header>
+
+        <nav class="algo-navigation">
+            <ul>
+                <li><a href="#fcfs" class="active">FCFS</a></li>
+                <li><a href="#sstf">SSTF</a></li>
+                <li><a href="#scan">SCAN</a></li>
+                <li><a href="#cscan">C-SCAN</a></li>
+                <li><a href="#look">LOOK</a></li>
+                <li><a href="#clook">C-LOOK</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Simulator</a></li>
+            </ul>
+        </nav>
+
+        <main class="algorithm-content">
+            <section id="fcfs" class="algorithm-section">
+                <h2>First Come First Serve (FCFS)</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>FCFS is the simplest disk scheduling algorithm. It processes requests in the order they arrive, without any optimization.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>Simple to implement</li>
+                                <li>No starvation</li>
+                                <li>May result in high average seek time</li>
+                                <li>No optimization for disk head movement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/fcfs.webp" alt="FCFS Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sstf" class="algorithm-section">
+                <h2>Shortest Seek Time First (SSTF)</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>SSTF selects the request with the minimum seek time from the current head position.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>Minimizes average seek time</li>
+                                <li>May cause starvation</li>
+                                <li>Better performance than FCFS</li>
+                                <li>More complex to implement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/sstf.webp" alt="SSTF Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="scan" class="algorithm-section">
+                <h2>SCAN (Elevator Algorithm)</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>SCAN algorithm moves the disk head in one direction until it reaches the end, then reverses direction.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>Uniform wait time</li>
+                                <li>Better response time than FCFS</li>
+                                <li>May have high response time</li>
+                                <li>No starvation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/scan.webp" alt="SCAN Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cscan" class="algorithm-section">
+                <h2>C-SCAN (Circular SCAN)</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>C-SCAN moves the head to the end of the disk, then jumps to the beginning without servicing requests on the return.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>Better response time than SCAN</li>
+                                <li>More uniform wait time</li>
+                                <li>May have higher seek time</li>
+                                <li>No starvation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/cscan.webp" alt="C-SCAN Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="look" class="algorithm-section">
+                <h2>LOOK</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>LOOK is similar to SCAN but only goes as far as the last request in each direction.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>More efficient than SCAN</li>
+                                <li>Better response time</li>
+                                <li>Reduces unnecessary movement</li>
+                                <li>No starvation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/look.webp" alt="LOOK Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="clook" class="algorithm-section">
+                <h2>C-LOOK (Circular LOOK)</h2>
+                <div class="algorithm-content">
+                    <div class="algorithm-description">
+                        <p>C-LOOK is similar to C-SCAN but only goes as far as the last request in each direction.</p>
+                        <div class="algorithm-details">
+                            <h3>Characteristics</h3>
+                            <ul>
+                                <li>Most efficient among all algorithms</li>
+                                <li>Best response time</li>
+                                <li>Minimal unnecessary movement</li>
+                                <li>No starvation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual-example">
+                        <h3>Visual Example</h3>
+                        <div class="example-image">
+                            <img src="images/clook.webp" alt="C-LOOK Algorithm Visualization" onerror="this.src=createPlaceholderImage()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison" class="algorithm-section">
+                <h2>Algorithm Comparison</h2>
+                <div class="comparison-details">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Complexity</th>
+                                <th>Average Seek Time</th>
+                                <th>Fairness</th>
+                                <th>Starvation</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FCFS</td>
+                                <td>Low</td>
+                                <td>High</td>
+                                <td>High</td>
+                                <td>None</td>
+                                <td>Light workloads</td>
+                            </tr>
+                            <tr>
+                                <td>SSTF</td>
+                                <td>Medium</td>
+                                <td>Medium</td>
+                                <td>Low</td>
+                                <td>Possible</td>
+                                <td>Random I/O intensive workloads</td>
+                            </tr>
+                            <tr>
+                                <td>SCAN</td>
+                                <td>Medium</td>
+                                <td>Medium</td>
+                                <td>Medium</td>
+                                <td>Limited</td>
+                                <td>Mixed workloads</td>
+                            </tr>
+                            <tr>
+                                <td>C-SCAN</td>
+                                <td>Medium</td>
+                                <td>Medium</td>
+                                <td>High</td>
+                                <td>Limited</td>
+                                <td>Uniform distributed workloads</td>
+                            </tr>
+                            <tr>
+                                <td>LOOK</td>
+                                <td>Medium</td>
+                                <td>Low</td>
+                                <td>Medium</td>
+                                <td>Limited</td>
+                                <td>Optimizing SCAN</td>
+                            </tr>
+                            <tr>
+                                <td>C-LOOK</td>
+                                <td>High</td>
+                                <td>Low</td>
+                                <td>High</td>
+                                <td>Limited</td>
+                                <td>High throughput systems</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="selection-guidelines">
+                        <h3>Selection Guidelines</h3>
+                        <ul>
+                            <li><strong>For simplicity:</strong> Use FCFS</li>
+                            <li><strong>For minimizing seek time:</strong> Use SSTF, LOOK, or C-LOOK</li>
+                            <li><strong>For fairness and performance:</strong> Use SCAN or C-SCAN</li>
+                            <li><strong>For high-throughput systems:</strong> Use C-LOOK</li>
+                            <li><strong>For real-time systems:</strong> Use deadline-based scheduling (not covered)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> for Operating Systems</p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link"><i class="fas fa-home"></i> Simulator</a>
+                <a href="#" class="footer-link"><i class="fas fa-book"></i> Documentation</a>
+                <a href="#" class="footer-link"><i class="fas fa-code"></i> Source Code</a>
+            </div>
+        </footer>
+    </div>
+    <script src="algorithm-info.js"></script>
+</body>
+</html> 

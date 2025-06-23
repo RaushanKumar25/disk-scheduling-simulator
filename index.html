@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Scheduling Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-hdd"></i> Disk Scheduling Simulator</h1>
+            <p>Visualize and compare different disk scheduling algorithms in real-time. Understand how each algorithm optimizes disk access and minimizes seek time.</p>
+            <a href="algorithm-info.html" class="info-link">
+                <i class="fas fa-book"></i> Learn More About Algorithms
+            </a>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="algorithm-selector">
+                    <h2>Select Algorithm</h2>
+                    <div class="algorithm-buttons">
+                        <button class="algo-btn active" data-algorithm="fcfs">
+                            <i class="fas fa-clock"></i> FCFS
+                        </button>
+                        <button class="algo-btn" data-algorithm="sstf">
+                            <i class="fas fa-bullseye"></i> SSTF
+                        </button>
+                        <button class="algo-btn" data-algorithm="scan">
+                            <i class="fas fa-arrows-alt-h"></i> SCAN
+                        </button>
+                        <button class="algo-btn" data-algorithm="cscan">
+                            <i class="fas fa-sync"></i> C-SCAN
+                        </button>
+                    </div>
+                    <div class="algorithm-info">
+                        <p id="algorithm-description">First Come First Serve (FCFS) processes requests in the order they arrive, without any optimization.</p>
+                    </div>
+                </div>
+
+                <div class="request-input">
+                    <h2>Disk Requests</h2>
+                    <div class="input-group">
+                        <input type="number" id="request-input" placeholder="Enter track number (0-199)">
+                        <button id="add-request" class="primary-btn">
+                            <i class="fas fa-plus"></i> Add Request
+                        </button>
+                    </div>
+                    <div class="requests-list">
+                        <h3>Current Requests</h3>
+                        <div id="requests-container"></div>
+                    </div>
+                </div>
+
+                <div class="simulation-controls">
+                    <h2>Simulation Controls</h2>
+                    <div class="control-group">
+                        <label for="head-position">Initial Head Position:</label>
+                        <input type="number" id="head-position" value="50" min="0" max="199">
+                    </div>
+                    <div class="control-group">
+                        <label for="direction">Direction (for SCAN):</label>
+                        <select id="direction">
+                            <option value="right">Right</option>
+                            <option value="left">Left</option>
+                        </select>
+                    </div>
+                    <div class="control-buttons">
+                        <button id="start-simulation" class="primary-btn">
+                            <i class="fas fa-play"></i> Start Simulation
+                        </button>
+                        <button id="clear-all" class="secondary-btn">
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visualization-section">
+                <div class="disk-visualization">
+                    <h2>Disk Visualization</h2>
+                    <div class="visualization-info">
+                        <p>Track Range: 0 - 199</p>
+                        <p>Current Head Position: <span id="current-position">50</span></p>
+                    </div>
+                    <div id="disk-track"></div>
+                    <div class="track-numbers"></div>
+                </div>
+
+                <div class="metrics-panel">
+                    <h2>Performance Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h3>Total Seek Time</h3>
+                            <p id="total-seek-time">0</p>
+                            <span class="metric-unit">tracks</span>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Average Seek Time</h3>
+                            <p id="avg-seek-time">0</p>
+                            <span class="metric-unit">tracks/request</span>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Throughput</h3>
+                            <p id="throughput">0</p>
+                            <span class="metric-unit">requests/second</span>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Request Count</h3>
+                            <p id="request-count">0</p>
+                            <span class="metric-unit">requests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="algorithm-comparison">
+                    <h2>Algorithm Comparison</h2>
+                    <div class="comparison-info">
+                        <p><strong>FCFS:</strong> Simple but may result in high average seek time</p>
+                        <p><strong>SSTF:</strong> Optimizes for shortest seek time but may cause starvation</p>
+                        <p><strong>SCAN:</strong> Provides uniform wait time but may have high response time</p>
+                        <p><strong>C-SCAN:</strong> Better response time than SCAN but may have higher seek time</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> for Operating Systems</p>
+            <p>Track range: 0-199 | Initial head position: 50</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#" class="footer-link"><i class="fas fa-book"></i> Documentation</a>
+                <a href="#" class="footer-link"><i class="fas fa-code"></i> Source Code</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
