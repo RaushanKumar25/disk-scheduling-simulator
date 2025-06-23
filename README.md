@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Disk Scheduling Algorithm Simulator
 
 A comprehensive web-based simulator for disk scheduling algorithms with detailed explanations and visualizations.
@@ -66,3 +67,7 @@ disk-scheduling-simulator/
 ## Contributing
 
 Feel free to submit issues and enhancement requests! 
+=======
+# disk-scheduling-simulator
+An interactive web-based simulator to visualize and compare disk scheduling algorithms like FCFS, SSTF, SCAN, LOOK, etc. Built for educational and analysis purposes.
+>>>>>>> 5fa9c40e41064b5b8c857707fedf056322190cde
