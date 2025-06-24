@@ -25,6 +25,11 @@ The goal is to:
 - ✅ Compare performance of algorithms side-by-side
 
 ---
+## Key Features
+
+- FCFS Algorithm
+- SSTF Algorithm
+- Visual Graph
 
 ## 📚 Algorithms Implemented
 
