@@ -1,73 +1,73 @@
-<<<<<<< HEAD
-# Disk Scheduling Algorithm Simulator
+# 💿 Disk Scheduling Simulator
 
-A comprehensive web-based simulator for disk scheduling algorithms with detailed explanations and visualizations.
+A powerful, interactive web-based application designed to **visualize and compare various disk scheduling algorithms** used in Operating Systems. This simulator helps users understand how different algorithms handle disk requests and optimize seek time.
 
-## Features
+> 🔍 Ideal for computer science students, operating systems learners, and educators!
 
-- Interactive simulation of disk scheduling algorithms
-- Real-time visualization of disk head movement
-- Detailed explanations of each algorithm
-- Performance metrics and comparisons
-- Responsive design for all devices
-- Modern black and blue theme
+---
 
-## Algorithms Implemented
+## 📘 What is Disk Scheduling?
 
-1. First Come First Serve (FCFS)
-2. Shortest Seek Time First (SSTF)
-3. SCAN (Elevator Algorithm)
-4. C-SCAN (Circular SCAN)
-5. LOOK
-6. C-LOOK (Circular LOOK)
+In an Operating System, when multiple I/O requests are sent to the hard disk, **Disk Scheduling Algorithms** decide the order in which these requests are processed.  
+The goal is to:
+- Minimize **seek time**
+- Improve **disk throughput**
+- Optimize overall **system performance**
 
-## Project Structure
+---
 
-```
-disk-scheduling-simulator/
-├── index.html              # Main simulator page
-├── algorithm-info.html     # Algorithm information page
-├── css/
-│   ├── styles.css         # Main styles
-│   └── algorithm-info.css # Algorithm info page styles
-├── js/
-│   ├── script.js          # Main simulator logic
-│   └── algorithm-info.js  # Algorithm info page logic
-└── images/                # Algorithm visualization images
-```
+## 🚀 Features of This Simulator
 
-## Setup
+- ✅ Visualize multiple disk scheduling algorithms
+- ✅ User-friendly controls and intuitive interface
+- ✅ Real-time animation of disk head movement
+- ✅ Displays total seek time, average seek time, and throughput
+- ✅ Compare performance of algorithms side-by-side
 
-1. Clone the repository
-2. Open `index.html` in a modern web browser
-3. No additional setup required - it's a pure HTML/CSS/JS application
+---
+## Key Features
 
-## Usage
+- FCFS Algorithm
+- SSTF Algorithm
+- Visual Graph
 
-1. **Main Simulator Page**
-   - Enter the number of disk requests
-   - Set the disk size
-   - Choose an algorithm
-   - Click "Start Simulation"
-   - Watch the visualization and metrics
+## 📚 Algorithms Implemented
 
-2. **Algorithm Information Page**
-   - Navigate through different algorithms
-   - View detailed explanations
-   - See visual examples
-   - Compare algorithm performance
+| Algorithm | Description |
+|-----------|-------------|
+| **FCFS** (First Come First Serve) | Services requests in the order they arrive. Simple but may cause long waits. |
+| **SSTF** (Shortest Seek Time First) | Selects the request closest to the current head position. Faster, but may cause starvation. |
+| **SCAN** (Elevator Algorithm) | Disk arm moves in one direction servicing all requests, then reverses. |
+| **LOOK** | Similar to SCAN, but only goes as far as the last request in each direction. |
+| **C-SCAN** (Circular SCAN) | Services requests in one direction, then jumps to the start without servicing while returning. |
+| **C-LOOK** | Like C-SCAN but only scans up to the last request, not the full disk end. |
 
-## Browser Support
+---
 
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
+## 💻 Technologies Used
 
-## Contributing
+- HTML5
+- CSS3
+- JavaScript
+- Canvas / SVG (if animations are used)
+---
 
-Feel free to submit issues and enhancement requests! 
-=======
-# disk-scheduling-simulator
-An interactive web-based simulator to visualize and compare disk scheduling algorithms like FCFS, SSTF, SCAN, LOOK, etc. Built for educational and analysis purposes.
->>>>>>> 5fa9c40e41064b5b8c857707fedf056322190cde
+## 🧠 How It Works
+
+1. **Select Algorithm**: Choose from FCFS, SSTF, SCAN, etc.
+2. **Input Disk Requests**: Provide a series of disk I/O requests.
+3. **Simulation Controls**: Start the simulation and watch the disk arm move.
+4. **View Metrics**: Check seek time, average seek time, and throughput.
+5. **Compare Algorithms**: Use the comparison view to analyze performance.
+
+---
+
+## 🏗️ Project Structure
+
+```bash
+📁 disk-scheduling-simulator/
+│
+├── index.html          # Main HTML file
+├── style.css           # Styling for layout and UI
+├── script.js           # Disk scheduling logic & visual simulation
+├── README.md           # You're reading it!
