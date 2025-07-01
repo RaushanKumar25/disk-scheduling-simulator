@@ -71,3 +71,8 @@ The goal is to:
 ├── style.css           # Styling for layout and UI
 ├── script.js           # Disk scheduling logic & visual simulation
 ├── README.md           # You're reading it!
+
+## 📷 UI Screenshot
+
+Here’s how the Disk Scheduling Simulator looks in action:
+![Disk Scheduling Simulator UI] (screenshots)
