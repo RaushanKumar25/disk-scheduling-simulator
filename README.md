@@ -6,7 +6,7 @@ A powerful, interactive web-based application designed to **visualize and compar
 
 ---
 
-## 📘 What is Disk Scheduling?
+## 📘 What is Disk Scheduling simulator?
 
 In an Operating System, when multiple I/O requests are sent to the hard disk, **Disk Scheduling Algorithms** decide the order in which these requests are processed.  
 The goal is to:
