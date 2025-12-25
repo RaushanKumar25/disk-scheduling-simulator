@@ -75,4 +75,4 @@ The goal is to:
 ## 📷 UI Screenshot
 
 Here’s how the Disk Scheduling Simulator looks in action:
-![Disk Scheduling Simulator UI] (screenshots)..
+![Disk Scheduling Simulator UI] (screenshots).
