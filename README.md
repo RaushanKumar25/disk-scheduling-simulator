@@ -16,7 +16,7 @@ The goal is to:
 
 ---
 
-## 🚀 Features of This Simulator
+## 🚀 Features of This Simulator 
 
 - ✅ Visualize multiple disk scheduling algorithms
 - ✅ User-friendly controls and intuitive interface
